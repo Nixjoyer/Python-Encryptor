@@ -23,7 +23,7 @@ You'll be prompted to enter a message. The script will display:
 # Requirements
 
 * Python 3.7 or higher
-* `cryptography` package
+* cryptography package
 
 Install it manually (if needed):
 
@@ -39,7 +39,7 @@ Install it manually (if needed):
 
 Clone the repo and run:
 
-`git clone https://github.com/your-username/encryption-script.git
+`git clone git@github.com:Nixjoyer/Encryption.py.git - replace if using HTTP
 cd encryption-script`
 
 # Run directly using flakes

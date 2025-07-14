@@ -1,7 +1,6 @@
 ---
 
 # Python Encryption Script (MD5 + Fernet)
-
 ---
 
 This project contains a simple Python script that:
@@ -32,7 +31,6 @@ Install it manually (if needed):
 ---
 
 # Running the Script
-
 ---
 
 🔹Option 1: On **NixOS (with flakes)**

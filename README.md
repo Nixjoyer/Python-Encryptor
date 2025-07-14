@@ -1,12 +1,14 @@
+---
+
 # Python Encryption Script (MD5 + Fernet)
+
+---
 
 This project contains a simple Python script that:
 
 * Computes the **MD5 hash** of an input message
 * Generates a **Fernet symmetric key**
 * Encrypts and decrypts the input message using the key
-
----
 
 # Usage
 
@@ -18,8 +20,6 @@ You'll be prompted to enter a message. The script will display:
 * The decrypted (original) message
 <img width="893" height="102" alt="Screenshot_20250712_125931" src="https://github.com/user-attachments/assets/ce5e4a99-7150-4613-9241-02f43670cbd9" />
 
----
-
 # Requirements
 
 * Python 3.7 or higher
@@ -30,9 +30,10 @@ Install it manually (if needed):
 `pip install cryptography`
 
 ---
----
 
 # Running the Script
+
+---
 
 🔹Option 1: On **NixOS (with flakes)**
 

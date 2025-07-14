@@ -23,14 +23,13 @@ You'll be prompted to enter a message. The script will display:
 # Requirements
 
 * Python 3.7 or higher
-* cryptography package
+* Cryptography package
 
 Install it manually (if needed):
 
 `pip install cryptography`
 
 ---
-
 ---
 
 # Running the Script
@@ -39,8 +38,9 @@ Install it manually (if needed):
 
 Clone the repo and run:
 
-`git clone git@github.com:Nixjoyer/Encryption.py.git - replace if using HTTP
-cd encryption-script`
+`git clone git@github.com:Nixjoyer/Encryption.py.git - replace if using HTTP`
+
+`cd encryption-script`
 
 # Run directly using flakes
 `nix run`
@@ -55,6 +55,14 @@ python3 encryptor.py`
 
 `nix.settings.experimental-features = [ "nix-command" "flakes" ];`
 
+## 📁 File Structure
+`
+├── encryptor.py     # The encryption script
+├── flake.nix        # Nix flake for reproducible builds
+├── flake.lock        # Nix flake file to lock version lists for reproducible builds
+└── README.md        # This file
+`
+
 ---
 
 🔹 Option 2: On **Other Linux Distros/ macOS**
@@ -68,13 +76,9 @@ python3 encryptor.py`
 
 `pip install cryptography`
 
----
-
 3. Run the script:
    
 `python3 encryptor.py`
-
----
 
 ---
 
@@ -100,13 +104,4 @@ You can either:
 `python encryptor.py`
 
 ---
-
-## 📁 File Structure **For NixOS**
-`
-├── encryptor.py     # The encryption script
-├── flake.nix        # Nix flake for reproducible builds
-├── flake.lock        # Nix flake file to lock version lists for reproducible builds
-└── README.md        # This file
-`
-
 ---

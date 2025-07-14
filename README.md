@@ -65,9 +65,12 @@ Clone the repo and run:
 
 🔹 Option 2: On **Other Linux Distros/ macOS**
 
-1. Make sure Python 3 is installed.
+1. Make sure Python 3 and pip are installed.
+
 `sudo apt install python3.13.5  and sudo apt install python3-pip(For Debian)`
+
 `sudo dnf install python3.13.5 and sudo dnf install python3-pip (For Fedora)`
+
 `sudo pacman -S python3.13.5 and sudo pacman -S python-pip (For Arch)`
  
 3. Install cryptography:

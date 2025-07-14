@@ -46,10 +46,9 @@ Clone the repo and run:
 `nix run`
 
 # Or enter a dev shell with Python + cryptography
-`nix develop
-python3 encryptor.py`
+`nix develop`
 
----
+`python3 encryptor.py`
 
 # Make sure `flakes` are enabled in your `/etc/nixos/configuration.nix`:
 

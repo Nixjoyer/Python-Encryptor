@@ -1,15 +1,20 @@
----
-
-# Python Encryption Script (MD5 + Fernet)
----
+# Python Encryption Script
 
 This project contains a simple Python script that:
 
 * Computes the **MD5 hash** of an input message
-* Generates a **Fernet symmetric key**
+* Generates a **Symmetric key**
 * Encrypts and decrypts the input message using the key
 
-# Usage
+## File Structure
+```bash
+├── encryptor.py     # The encryption script
+├── flake.nix        # Contains the 
+├── flake.lock        # Locks down the version
+└── README.md        # This file
+```
+
+## Usage
 
 You'll be prompted to enter a message. The script will display:
 
@@ -19,90 +24,90 @@ You'll be prompted to enter a message. The script will display:
 * The decrypted (original) message
 <img width="893" height="102" alt="Screenshot_20250712_125931" src="https://github.com/user-attachments/assets/ce5e4a99-7150-4613-9241-02f43670cbd9" />
 
-# Requirements
+## Requirements
 
 * Python 3.7 or higher
 * Cryptography package
 
-Install it manually (if needed):
+# How to Run
 
-`pip install cryptography`
+## NixOS or Nix System (with flakes)
 
----
+Make sure `flakes` are enabled in your `/etc/nixos/configuration.nix`:
 
-# Running the Script
----
+```bash
+nix.settings.experimental-features = [ "nix-command" "flakes" ];
+```
 
-🔹Option 1: On **NixOS (with flakes)**
+* Clone the repo:
+```bash
+git@github.com:Nixjoyer/Python-Encryptor.git && cd Python-Encryptor
+```
 
-Clone the repo and run:
+* Run directly
+```bash
+nix run 
+```
 
-`git clone git@github.com:Nixjoyer/Encryption.py.git - replace if using HTTP`
+* Or Enter Nix Shell and run it inside
+```bash
+nix develop
+python3 encryptor.py
+```
 
-`cd encryption-script`
+## Other Linux Distros/ MacOS
 
-# Run directly using flakes
-`nix run`
+Make sure Python 3 and pip are installed.
 
-# Or enter a dev shell with Python + cryptography
-`nix develop`
+* Debian/Ubuntu
+```bash
+sudo apt install python python-pip
+```
 
-`python3 encryptor.py`
+* Fedora
+```bash
+sudo dnf install python python-pip
+```
 
-# Make sure `flakes` are enabled in your `/etc/nixos/configuration.nix`:
-
-`nix.settings.experimental-features = [ "nix-command" "flakes" ];`
-
-## 📁 File Structure
-`
-├── encryptor.py     # The encryption script
-├── flake.nix        # Nix flake for reproducible builds
-├── flake.lock        # Nix flake file to lock version lists for reproducible builds
-└── README.md        # This file
-`
-
----
-
-🔹 Option 2: On **Other Linux Distros/ macOS**
-
-1. Make sure Python 3 and pip are installed.
-
-`sudo apt install python3.13.5  and sudo apt install python3-pip(For Debian)`
-
-`sudo dnf install python3.13.5 and sudo dnf install python3-pip (For Fedora)`
-
-`sudo pacman -S python3.13.5 and sudo pacman -S python-pip (For Arch)`
+* Arch
+```bash
+sudo pacman -S python python-pip
+```
  
-3. Install cryptography:
+* Install cryptography:
 
-`pip install cryptography`
+```bash
+pip install cryptography
+```
 
-3. Run the script:
+* Run the script:
    
-`python3 encryptor.py`
+```bash
+python encryptor.py
+```
 
----
-
-🔹 Option 3: On **Windows**
+## **Windows**
 
 You can either:
 
-🅰️ Use **WSL**
+### **1. Windows Subsystem for Linux (WSL)**
 
-1. Install WSL and Ubuntu or any other distro from the Microsoft Store
-2. Follow the "Other Linux" instructions above
+* Enable WSL and install Ubuntu or any other distro.
 
-🅱️ Or use the **Python Installer**
+* Follow the `Other Linux` instructions above
 
-1. Download Python from [https://www.python.org/downloads/](https://www.python.org/downloads/)
-2. Open Command Prompt
-3. Install cryptography:
+### **2. Python Installer**
 
-`pip install cryptography`
+* Download Python from [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-4. Run:
+* Open Command Prompt
 
-`python encryptor.py`
+* Install cryptography:
+```bash
+pip install cryptography
+```
 
----
----
+* Run:
+```bash
+python encryptor.py
+```
